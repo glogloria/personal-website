@@ -1,0 +1,489 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Chewy", system-ui;
+    color: white;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Fonts */
+
+.chewy-regular {
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Navigation bar */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    padding: 30px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.header.scrolled {
+  background-image: linear-gradient(to right, rgba(235, 75, 63, 0.5), rgba(240, 148, 91, 0.5));}
+
+.header.scrolled p {
+    color: rgb(237, 205, 205);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.nav-links {
+    word-spacing: 50px;
+    flex: 1;
+    font-size: 40px;
+    text-align: end;
+    font-weight: 0px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline white;
+}
+
+.logo {
+    max-height: 60px;
+    height: auto;
+}
+
+/* Home */
+
+#home {
+    display: flex;
+    height: 100vh;
+    background-image: linear-gradient(to right, #eb4b3f, #f0945b);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+/* Introduction */
+
+.introduction {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 600px;
+    color: white;
+
+    font-family: "Chewy", system-ui;
+}
+
+.introduction p {
+    font-family: "Roboto Mono", monospace;
+    font-size: 38px;
+    font-weight: 10px;
+    margin-top: 0;
+}
+
+.introduction h1 {
+    margin-top: 5px;
+    font-size: 100px;
+    letter-spacing: 7px;
+}
+
+.contact {
+    display: flex;
+    flex-flow: row nowrap;    
+    justify-content: center;
+    word-spacing: 20px;
+}
+
+.contact a {
+    border-color: white;
+    border-style: solid;
+    border-width: 5px;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-family: "Roboto Mono", monospace;
+}
+
+.linkedin-button {
+    background-color: #f2f1eb;
+    color: #ff2828;
+}
+
+a.linkedin-button:hover {
+    text-decoration: underline #ff2828;
+}
+
+.github-button {
+    background-color: #ff2828;
+    max-height: 100%;
+}
+
+a.github-button:hover {
+    text-decoration: underline white;
+}
+
+/* Projects */
+
+#projects{
+    display: block;
+    background: repeating-linear-gradient(
+        45deg,
+        white,
+        #f2f1eb 8px
+    );
+}
+
+#projects h1 {
+    text-align: center;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300px;
+    font-size: 40px;
+    word-spacing: 40px;
+    color: #ff2828;
+    padding: 15px;
+}
+
+.header-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-family: "Roboto Mono", monospace;
+}
+
+.dropdown-menu a:hover {
+    text-decoration: underline black;
+}
+
+.dropdown-menu a.active { /* Active class for cliked filters*/
+    font-weight: bold;
+}
+
+.filter {
+    color: #ff2828;
+    font-family: "Roboto Mono", monospace;
+    font-size: large;
+    grid-column: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.filter:hover {
+    text-decoration: underline black;
+}
+
+.project-subtitle {
+    color: black;
+    font-family: "Roboto Mono", monospace;
+    font-size: large;
+    grid-column: 2 / span 1;
+    text-align: center;
+    width: auto;
+    white-space: nowrap;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    padding: 20px;
+    place-items: center;
+}
+
+.empty-project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    padding: 20px;
+    place-items: center;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background: #ff2828;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 300px;
+    overflow: hidden;
+}
+
+.project-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.pro-details {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.languages {
+    display: grid;
+    grid-template-columns: 0fr 0fr 0fr;
+    gap: 5px;
+}
+
+.languages p {
+    border: 2px solid black;
+    background-color: white;
+    color: black!important;
+    font-family: "Roboto Mono", monospace;
+    font-size: medium;
+    padding: 3px;
+}
+
+.pro-details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pro-details h2 {
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    font-size: large;
+    padding-top: 3px;
+}
+
+.pro-details p{
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    font-size: medium;
+    padding-bottom: 3px;
+}
+
+.button {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    padding: 0px 22px;
+    font-family: "Roboto Mono", monospace;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
+/* About */
+.about {
+    display: flex;
+    place-content: center;
+    height: 50vh;
+    background-image: linear-gradient(to right, #eb4b3f, #f0945b);
+    color: white;
+}
+
+.about-container {
+    display: grid;
+    grid-gap: 200px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.headshot {
+    display: flex;
+    justify-content: center;
+    max-height: 250px;
+    height: auto;
+}
+
+.right {
+    font-family: "Roboto Mono", monospace;
+}
+
+.right h2 {
+    font-weight: bolder;
+    text-align: left;
+}
+
+.right p {
+    margin-top: 10px;
+    max-height: 100%;
+    width: 700px;
+    font-size: 18px;
+}
+
+/* Stickman animation */
+
+.animation {
+    margin: 15px auto;
+}
+
+.stickman {
+    position: relative;
+}
+
+.head {
+    width: 20px;
+    height: 20px;
+    top: 330px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.torso {
+    background: white;
+    height: 20px;
+    width: 3px;
+    transform: translateX(12px) translateY(-5px);
+}
+
+.left-arm, .right-arm {
+    background: white;
+    position: absolute;
+    width: 3px;
+    height: 30px;
+    transform-origin: top center;
+    border-radius: 20%;
+}
+
+.left-arm {
+    top: 29px;
+    left: 12px;
+    transform: rotate(30deg);
+}
+
+/* .right-arm {
+    top: 29px;
+    left: 12px;
+    transform: rotate(-30deg);
+}
+
+.left-hand, .right-hand {
+    background: white;
+    position: absolute;
+    width: 10px;
+    height: 3px;
+    transform-origin: left center;
+    border-radius: 20%;
+}
+
+.left-hand {
+    top: 52.5px;
+    left: -1.5px;
+    transform: rotate(40deg);
+}
+
+.right-hand {
+    top: 52.5px;
+    left: 27.8px;
+    transform: rotate(40deg);
+}
+
+.left-leg {
+    transform: rotate(40deg);
+    top: 45px;
+    left: 50px;
+} */
+/* 
+.right-leg {
+    transform: rotate(-40deg);
+    left: 27.8px;
+} */
+
+.sidewalk {
+    background: white;
+    min-width: 100%;
+    height: 6px;
+}
+
+/* Website scaling by screen size */
+
+@media screen (max-width: 768px) {
+    body {
+
+    }
+}
+
+
+/* Snowflakes */
+
+#snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.snowflake:hover {
+    transform: translateY(-10px) scale(1.2);
+}
+
