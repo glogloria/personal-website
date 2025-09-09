@@ -1,5 +1,5 @@
 # personal-website
-Welcome to the official repository for my personal website! This site serves as a digital hub for my computer science and computer engineering projects. You can learn more about my projects and how I built them.
+Welcome to the official repository for my personal website! This site serves as a digital hub for my computer science and computer engineering projects. Here you can learn more about my projects and how I built them.
 
 --
 
