@@ -10,15 +10,6 @@ Welcome to the official repository for my personal website! This site serves as 
 
 --
 
-## Installation
-
-To get started with the project locally:
-
-1. Clone this repository:
-''' bash git clone https://github.com/girlswhocodeuncg/gwc-website.git
-
---
-
 ## Folder structure
 /Personal Website
     /assets
