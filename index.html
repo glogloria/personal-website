@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/Code_Logo_White.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- Chewy font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Roboto Mono font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <title>Gloria Sukidi</title>
+</head>
+<body>
+    <!-- Home -->
+    <section id="home">
+
+        <div class="introduction">
+            <p> A LITTLE ABOUT ME </p>
+            <h1> Gloria Sukidi </h1>
+            <div class="contact">
+                <a class="linkedin-button" href="https://www.linkedin.com/in/agsukidi" target="_blank"> LinkedIn</a>
+                <a class="github-button" href="https://github.com/glogloria" target="_blank"> GitHub </a>
+            </div>
+        </div>
+
+        <div class="header">
+            <nav>
+                <img class="logo" src="../assets/Code_Logo_White.png" alt="Image of a html end tag">
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#footer">About</a>
+                </div>
+            </nav>
+        </div>
+
+        <div id="snowflake-container"></div>
+            
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h1> Projects</h1>
+        <div class="header-container">
+            <div class="dropdown">
+                <div class="filter">&#11167 Filter</div>
+                <div class="dropdown-menu">
+                    <a href="#" data-filter="all"> All </a>
+                    <a href="#" data-filter="frontend"> HTML, CSS, JavaScript </a>
+                    <a href="#" data-filter="python"> Python </a>
+                    <a href="#" data-filter="raspberrypi"> Raspberry Pi</a>
+                </div>
+            </div>
+            <p class="project-subtitle"> Interested in my projects? Explore below! </p>
+        </div>
+
+        <section id="all" data-project="all" class="project-section">
+            <div class="project-container">
+                <div class="project-card">
+                    <img src="../assets/AGS_PersonalWebsite.png" img="A screenshot of the homepage of this website.">
+                    <div class="pro-details">
+                        <div class="languages">
+                            <p> HTML </p>
+                            <p> CSS </p>
+                            <p> JavaScript </p>
+                        </div>
+                        <h2 class="project-title"> Digital Portfolio </h2>
+                        <p> A personal website designed and developed from scratch to serve as a digital portfolio. </p>
+                        <div class="project-btns"> 
+                            <a href="https://github.com/glogloria/personal-website" class="button" target="_blank" rel="noopener noreferrer">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="frontend" data-project="frontend" class="project-section">
+            <div class="empty-project-container">
+                <p>  No available projects </p>
+            </div>        
+        </section>
+
+        <section id="python" data-project="python" class="project-section">
+            <div class="empty-project-container">
+                <p>  No available projects </p>
+            </div>
+        </section>
+
+        <section id="raspberrypi" data-project="raspberrypi" class="project-section">
+            <div class="empty-project-container">
+                <p>  No available projects </p>
+            </div> 
+        </section>
+
+    </section>
+
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="about">
+            <div class="about-container">
+                <div class="left">
+                    <img class="headshot" src="../assets/Gloria_Headshot_White.png" alt="Gloria Sukidi, a black girl with transparent glasses smiling in a headshot.">
+                </div>
+
+                <div class="right">
+                    <h2> About </h2>
+                    <p> Hey! I'm Gloria, a 4th year computer science student at the University of North Carolina at Greensboro (a.k.a an *almost* certified computer nerd). 
+                        I love to code and build new things, and have a background in global marketing.
+                        Outside of career and academics, I enjoy reading and writing! </p>
+                    <!-- <div class="animation">
+                        <div class="stickman">
+                            <div class="upper-body">
+                                <div class="head"></div>
+                                <div class="torso">
+                                    <div class="left-arm">
+                                        <div class="left-hand"></div>
+                                    </div>
+                                    <div class="right-arm">
+                                        <div class="right-hand"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lower-body">
+                                <div class="left-leg">
+                                    <div class="left-foot"></div>
+                                </div>
+                                <div class="right-leg">
+                                    <div class="right-foot"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidewalk"></div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/index.js" defer></script>
+</body>
+</html>
