@@ -2,9 +2,6 @@
 const filterLinks = document.querySelectorAll('[data-filter]');
 const sections = document.querySelectorAll('[data-project]');
 const header = document.querySelector('.header');
-const snowContainer = document.getElementById("snow-container");
-const numSnowflakes = 30;
-const snowFlakes = [];
 
 function applyFilter(selectedFilter) {
     filterLinks.forEach(l => l.classList.remove('active'));
@@ -23,7 +20,7 @@ function applyFilter(selectedFilter) {
         }
     });
 }
-
+  
 applyFilter('all');
 
 filterLinks.forEach(link => {
@@ -44,17 +41,22 @@ window.addEventListener('scroll', () => {
 });
 
 // Hoempage snowflakes
+const snowContainer = document.getElementById("snowflake-container");
+const numSnowflakes = 250;
+const snowFlakes = [];
+
+// Generates snowflakes of random sizes
 
 for (let i = 0; i < numSnowflakes; i++) {
     const flake = document.createElement("div");
     flake.classList.add("snowflake");
     flake.style.left = `${Math.random() * window.innerWidth}px`;
-    flake.style.top = `${Math.random() * window.nnerHEight}px`;
+    flake.style.top = `${Math.random() * window.innerHeight}px`;
     snowContainer.appendChild(flake);
-    snowContainerflakes.push(flake);
+    snowFlakes.push(flake);                                      
 }
 
-document.addEventListener("mousemover", (e) => {
+document.addEventListener("mousemove", (e) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
 
