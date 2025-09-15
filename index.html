@@ -45,60 +45,59 @@
 
     <!-- Projects -->
     <section id="projects">
-        <h1> Projects</h1>
-        <div class="header-container">
+        <h1>Projects</h1>
+        <div class="project-subheader">
             <div class="dropdown">
                 <div class="filter">&#11167 Filter</div>
                 <div class="dropdown-menu">
-                    <a href="#" data-filter="all"> All </a>
-                    <a href="#" data-filter="frontend"> HTML, CSS, JavaScript </a>
-                    <a href="#" data-filter="python"> Python </a>
-                    <a href="#" data-filter="raspberrypi"> Raspberry Pi</a>
+                    <a href="#" onclick="event.preventDefault(); filterSelection('all')">All</a>
+                    <a href="#" onclick="event.preventDefault(); filterSelection('frontend')">HTML, CSS, JavaScript</a>
+                    <a href="#" onclick="event.preventDefault(); filterSelection('python')">Python</a>
+                    <a href="#" onclick="event.preventDefault(); filterSelection('java')">Java</a>
+                    <a href="#" onclick="event.preventDefault(); filterSelection('raspberrypi')">Raspberry Pi</a>
+                    <a href="#" onclick="event.preventDefault(); filterSelection('design')">UX/UI Design</a>
                 </div>
             </div>
-            <p class="project-subtitle"> Interested in my projects? Explore below! </p>
+            <p id="project-subtitle"> Interested in my projects? Explore below! </p>
         </div>
 
-        <section id="all" data-project="all" class="project-section">
-            <div class="project-container">
-                <div class="project-card">
-                    <img src="./assets/AGS_PersonalWebsite.png" img="A screenshot of the homepage of this website.">
-                    <div class="pro-details">
-                        <div class="languages">
-                            <p> HTML </p>
-                            <p> CSS </p>
-                            <p> JavaScript </p>
-                        </div>
-                        <h2 class="project-title"> Digital Portfolio </h2>
-                        <p> A personal website designed and developed from scratch to serve as a digital portfolio. </p>
-                        <div class="project-btns"> 
-                            <a href="https://github.com/glogloria/personal-website" class="button" target="_blank" rel="noopener noreferrer">Code</a>
+
+        <div class="filter-container">
+            <div class="filterDiv all"></div>
+            <div class="filterDiv frontend">
+                <div class="project-container">
+                    <div class="project-card">
+                        <img src="./assets/AGS_PersonalWebsite.png" img="A screenshot of the homepage of this website.">
+                        <div class="pro-details">
+                            <div class="languages">
+                                <p> HTML </p>
+                                <p> CSS </p>
+                                <p> JavaScript </p>
+                            </div>
+                            <h2 class="project-title"> Digital Portfolio </h2>
+                            <p> A personal website developed to serve as a digital portfolio. </p>
+                            <div class="project-btns"> 
+                                <a href="https://github.com/glogloria/personal-website" class="button" target="_blank" rel="noopener noreferrer">Code</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+
             </div>
-        </section>
-
-        <section id="frontend" data-project="frontend" class="project-section">
-            <div class="empty-project-container">
-                <p>  No available projects </p>
-            </div>        
-        </section>
-
-        <section id="python" data-project="python" class="project-section">
-            <div class="empty-project-container">
-                <p>  No available projects </p>
+            <div class="filterDiv python">
+                
             </div>
-        </section>
+            <div class="filterDiv java">
 
-        <section id="raspberrypi" data-project="raspberrypi" class="project-section">
-            <div class="empty-project-container">
-                <p>  No available projects </p>
-            </div> 
-        </section>
-
-    </section>
+            </div>
+            <div class="filterDiv raspberrypi">
+                
+            </div>
+            <div class="filterDiv design">
+                
+            </div>
+        </div>
 
     </section>
 
@@ -144,6 +143,6 @@
         </div>
     </section>
 
-    <script src=index.js" defer></script>
+    <script src="index.js" defer></script>
 </body>
 </html>
