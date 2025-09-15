@@ -161,6 +161,7 @@ a.github-button:hover {
         white,
         #f2f1eb 8px
     );
+    min-height: 500px;
 }
 
 #projects h1 {
@@ -173,9 +174,10 @@ a.github-button:hover {
     padding: 15px;
 }
 
-.header-container{
+.project-subheader{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 50px;
 }
 
 .dropdown {
@@ -200,6 +202,7 @@ a.github-button:hover {
 .dropdown-menu a {
     display: flex;
     flex-direction: column;
+    text-align: start;
     color: black;
     font-family: "Roboto Mono", monospace;
 }
@@ -217,7 +220,6 @@ a.github-button:hover {
     font-family: "Roboto Mono", monospace;
     font-size: large;
     grid-column: 1;
-    text-align: left;
     padding-left: 20px;
 }
 
@@ -225,7 +227,15 @@ a.github-button:hover {
     text-decoration: underline black;
 }
 
-.project-subtitle {
+.filterDiv {
+    display: none;
+}
+
+.filterDiv.show {
+    display: block;
+}
+
+#project-subtitle {
     color: black;
     font-family: "Roboto Mono", monospace;
     font-size: large;
@@ -237,7 +247,8 @@ a.github-button:hover {
 
 .project-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
     gap: 50px;
     padding: 20px;
     place-items: center;
