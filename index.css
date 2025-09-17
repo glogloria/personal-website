@@ -135,7 +135,7 @@ nav {
 }
 
 .linkedin-button {
-    background-color: #f2f1eb;
+    background-color: #fbe2c1;
     color: #ff2828;
 }
 
@@ -161,7 +161,7 @@ a.github-button:hover {
         white,
         #f2f1eb 8px
     );
-    min-height: 500px;
+    min-height: 100vh;
 }
 
 #projects h1 {
@@ -177,7 +177,7 @@ a.github-button:hover {
 .project-subheader{
     display: grid;
     justify-content: center;
-    gap: 50px;
+    gap: 20px;
 }
 
 .dropdown {
@@ -215,12 +215,20 @@ a.github-button:hover {
     font-weight: bold;
 }
 
+
 .filter {
-    color: #ff2828;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+    gap: 20px;
+
+    border-width: 0px;
     font-family: "Roboto Mono", monospace;
     font-size: large;
-    grid-column: 1;
-    padding-left: 20px;
+}
+
+.filterBtn {
+    background-color: #fbe2c1;
 }
 
 .filter:hover {
@@ -239,10 +247,8 @@ a.github-button:hover {
     color: black;
     font-family: "Roboto Mono", monospace;
     font-size: large;
-    grid-column: 2 / span 1;
     text-align: center;
     width: auto;
-    white-space: nowrap;
 }
 
 .project-container {

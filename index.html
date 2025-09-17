@@ -47,18 +47,15 @@
     <section id="projects">
         <h1>Projects</h1>
         <div class="project-subheader">
-            <div class="dropdown">
-                <div class="filter">&#11167 Filter</div>
-                <div class="dropdown-menu">
-                    <a href="#" onclick="event.preventDefault(); filterSelection('all')">All</a>
-                    <a href="#" onclick="event.preventDefault(); filterSelection('frontend')">HTML, CSS, JavaScript</a>
-                    <a href="#" onclick="event.preventDefault(); filterSelection('python')">Python</a>
-                    <a href="#" onclick="event.preventDefault(); filterSelection('java')">Java</a>
-                    <a href="#" onclick="event.preventDefault(); filterSelection('raspberrypi')">Raspberry Pi</a>
-                    <a href="#" onclick="event.preventDefault(); filterSelection('design')">UX/UI Design</a>
-                </div>
-            </div>
             <p id="project-subtitle"> Interested in my projects? Explore below! </p>
+            <div class="filter">
+                <button class="filterBtn" onclick="event.preventDefault(); filterSelection('all')">All</button>
+                <button class="filterBtn" onclick="event.preventDefault(); filterSelection('frontend')">HTML, CSS, JavaScript</button>
+                <button class="filterBtn" onclick="event.preventDefault(); filterSelection('python')">Python</button>
+                <button class="filterBtn" onclick="event.preventDefault(); filterSelection('java')">Java</button>
+                <button class="filterBtn" onclick="event.preventDefault(); filterSelection('raspberrypi')">Raspberry Pi<button>
+                <button class="filterBtn" onclick="event.preventDefault(); filterSelection('design')">UX/UI Design</button>
+            </div>
         </div>
 
 
